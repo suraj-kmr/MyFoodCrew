@@ -1,0 +1,196 @@
+/* Compatibility styles for frameworks like bootstrap, foundation e.t.c */
+.xzoom-source img, .xzoom-preview img, .xzoom-lens img {
+  display: block;
+  max-width: none;
+  max-height: none;
+}
+/* --------------- */
+
+/* xZoom Styles below */
+.xzoom-container { 
+      margin: auto;
+    text-align: center;
+}
+
+.xzoom-thumbs {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.xzoom { 
+  /*-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);  */
+  margin-bottom: 15px; 
+}
+.xzoom2, .xzoom3, .xzoom4, .xzoom5 {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);  
+  margin-bottom: 15px;  
+}
+
+/* Thumbs */
+.xzoom-gallery, .xzoom-gallery2, .xzoom-gallery3, .xzoom-gallery4, .xzoom-gallery5 {
+  /* border: 1px solid #cecece; */
+  margin-left: 5px;
+  margin-bottom: 16px;
+}
+
+.xzoom-source, .xzoom-hidden {
+  display: block;
+  position: static;
+  float: none;
+  clear: both;
+}
+
+/* Everything out of border is hidden */
+.xzoom-hidden {
+  overflow: hidden;
+}
+
+/* Preview */
+.xzoom-preview {
+  border: 1px solid #888;
+  background: #2f4f4f;
+  box-shadow: -0px -0px 10px rgba(0,0,0,0.50);
+}
+
+/* Lens */
+.xzoom-lens {
+  border: 1px solid #555;
+  box-shadow: -0px -0px 10px rgba(0,0,0,0.50);
+  cursor: crosshair;
+}
+
+/* Loading */
+.xzoom-loading {
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  opacity: .7;
+  background: url(../images/xloading.gif);
+  width: 48px;
+  height: 48px;
+}
+
+/* Additional class that applied to thumb when it is active */
+.xactive {
+  /* -webkit-box-shadow: 0px 0px 3px 0px rgba(74,169,210,1); */
+  -moz-box-shadow: 0px 0px 3px 0px rgba(74,169,210,1);
+  /* box-shadow: 0px 0px 3px 0px rgba(74,169,210,1); */
+  /* border: 1px solid #4aaad2; */
+}
+
+/* Caption */
+.xzoom-caption {
+  position: absolute;
+  bottom: -43px;
+  left: 0;
+  background: #000;
+  width: 100%;
+  text-align: left;
+}
+
+.xzoom-caption span {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: block;
+  font-size: 0.75em;
+  font-weight: bold;
+  padding: 10px;
+}
+
+ #default.padding-top0{
+    border-radius: 2px;
+    background-color: #fff;
+    border: solid 1px #efe9e9;
+    display: inline-block;
+    width: 100%;
+    min-height: 510px;
+}
+
+#xzoom-default {
+    margin: 10px;
+    padding: 5px;
+    max-width: 100%;
+    width: 76% !important;
+    float: left;
+    max-height: 380px;
+    border: solid 1px #ccc;
+}
+ .img-sm-thumb{ width:80px;}
+ 
+.xzoom-thumbs {
+    width: 20%;
+    text-align: center;
+    display: block;
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 360px;
+    overflow: scroll;
+    overflow-x: hidden;
+    
+}
+
+
+/* width */
+.xzoom-thumbs::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+.xzoom-thumbs::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+.xzoom-thumbs::-webkit-scrollbar-thumb {
+    background:#ccc; 
+    border-radius:50px;
+}
+
+/* Handle on hover */
+.xzoom-thumbs::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+ @media(max-width:460px){
+     
+     /* Thumbs */
+.xzoom-gallery, .xzoom-gallery2, .xzoom-gallery3, .xzoom-gallery4, .xzoom-gallery5 {
+    border:0px solid #cecece; 
+}
+
+/* Additional class that applied to thumb when it is active */
+.xactive {
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(74,169,210,1); 
+  -moz-box-shadow: 0px 0px 0px 0px rgba(74,169,210,1);
+   box-shadow: 0px 0px 0px 0px rgba(74,169,210,1); 
+  border: 0px solid #4aaad2; 
+}
+
+     
+     .xzoom { 
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.5); 
+  margin-bottom: 15px; 
+}
+     
+ .img-sm-thumb{ width:70px;}
+ 
+ .xzoom-thumbs {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+ .xzoom-thumbs a{height: 100px;display: inline-block;overflow: hidden;border: solid 1px #ccc;}
+ .xzoom-thumbs a img{  overflow:hidden;}
+ #xzoom-default {float: inherit;}
+     
+ }
+
+ 
