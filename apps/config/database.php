@@ -95,13 +95,12 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
-
 $db['local'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	'database' => 'rawwsworl',
+	'database' => 'food',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

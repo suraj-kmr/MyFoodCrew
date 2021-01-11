@@ -354,7 +354,7 @@ $userid = $this -> session -> userdata('userid');
 </div>
 
 <div class="footer text-center">
-    Copyright &copy; <?php echo date('Y'); ?>. Version 1.1. Powered by <a href="http://www.arnavinfotech.com" title="Arnav Infotech" target="_blank">Web Developer Vikash Kumar</a>
+    Copyright &copy; <?php echo date('Y'); ?>. Version 1.1. Powered by <a href="http://www.arnavinfotech.com" title="Arnav Infotech" target="_blank">Origin It Solution</a>
 </div>
 </body>
 </html>

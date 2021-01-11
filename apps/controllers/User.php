@@ -15,6 +15,7 @@ class User extends AI_Controller
         $this -> data['user'] = $this -> User_model -> getUserById($flag['user_id']);
     }
 
+     
     function register()
     {
          if ($this->isLoggedIn()) {

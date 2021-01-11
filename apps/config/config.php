@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // $config['base_url'] = 'http://localhost/raeesworld';
- $config['base_url'] = 'http://econ.palaksys.net/food'; 
+  $config['base_url'] = 'http://econ.palaksys.net/food'; 
 
 /*
 |--------------------------------------------------------------------------
