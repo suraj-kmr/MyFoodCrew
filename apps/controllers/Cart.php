@@ -18,7 +18,6 @@ class Cart extends AI_Controller{
 	}
 
 	// Add Cart function
-	// again changing in this function..	
 	function add_cart(){
 		$pid = $this -> input -> post('pid');
 		$price = $this -> input -> post('price');
