@@ -16,7 +16,7 @@ class Cart extends AI_Controller{
         
 		$this -> load -> view('default', $this -> data);
 	}
-
+// 3th time chqab
 	// Add Cart function
 	// again changing in this function..	
 	function add_cart(){
