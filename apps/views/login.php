@@ -17,7 +17,7 @@
 					  </div>
 
 					  <div class="form_btn">
-						<button type="submit" class="btn btn-default">Create New Account</button>
+						<button type="submit" class="btn btn-default">Login</button>
 						<a class="forget_pass" href="">Forgot Password</a>
 					  </div>
 					</form>

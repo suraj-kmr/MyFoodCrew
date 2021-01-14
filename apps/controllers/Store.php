@@ -102,34 +102,45 @@ class Store extends AI_Controller
         $this->load->view('default',$this->data);
     }
 
-    function changepassword(){
-        
-        //print_r($_POST); die;
-        $this -> data['main'] = "user-profile";
+    function change_password(){
         $this -> form_validation -> set_rules('oldpass', "Old Password", "required");
         $this -> form_validation -> set_rules('password', "New Password", "required|min_length[6]");
         $this -> form_validation -> set_rules('cnfpassword', "Confirm Password", "required|matches[password]");
         if($this -> form_validation -> run()){
-
-            echo $oldp = $this -> input -> post('oldpass');
-           echo  $newp = $this -> input -> post('password'); die;
-
+            $oldp = $this -> input -> post('oldpass');
+            $newp = $this -> input -> post('password');
             $pass=array('pass',$newp);
-            $temp =  $this -> User_model -> getUserById($this -> data['user']->id);
-
+            $user = $this -> data['login'];
+            $temp =  $this -> User_model -> getUserById($user['user_id']);
             if($temp -> pass == $oldp){
-                $this -> db -> update('users', array('pass'=>$newp), array('id'=>$this -> data['user']->id));
-
-
+                $this -> db -> update('users', array('pass'=>$newp), array('id'=>$user['user_id']));
                 $this -> session -> set_flashdata("success", "New password updated successfully");
             }else{
                 $this -> session -> set_flashdata("error", "Invalid old password.");
             }
-            redirect('accounts/changepassword');
+            redirect('/user-profile');
         }
-        $this -> load -> view('default', $this -> data);
+        else{
+            $this -> session -> set_flashdata("error", validation_errors());
+            redirect('/user-profile');
+        }
     }
 
+    function update_personal_info(){
+        $this -> form_validation -> set_rules('data[first_name]', "First Name", "required");
+        $this -> form_validation -> set_rules('data[last_name]', "Last Name", "required");
+        if($this -> form_validation -> run()){
+            $data = $this->input->post('data');
+            $user = $this -> data['login'];
+            $this -> db -> update('users', $data, array('id'=>$user['user_id']));
+            $this -> session -> set_flashdata("success", "Personal information updated successfully");
+            redirect('/user-profile');
+        }
+        else{
+            $this -> session -> set_flashdata("error", validation_errors());
+            redirect('/user-profile');
+        }
+    }
 
     function logout()
     {

@@ -9,7 +9,7 @@
 			<div class="opnclose">
 			<button id="btnsidebar" onclick="openNav()"><i class="fa fa-bars" aria-hidden="true"></i></button>
 			</div>
-			Name/Username
+			<?= ucfirst($user->first_name); ?>
 		</div>
 		<div class="main_inner">
 			<div class="page-title main_title">
@@ -94,31 +94,31 @@
 									</div>
 									<div id="info_pp" class="tab-pane">
 
-										<form class="form-horizontal" action="" method="post">
+										<form class="form-horizontal" action="<?=site_url('update-personal-info')?>" method="post">
 											<h4 class="mb-xlg">Personal Information</h4>
 											<fieldset>
 												<div class="form-group">
 													<label class="col-md-12 control-label" for="profileFirstName">First Name</label>
 													<div class="col-md-12">
-														<input type="text" class="form-control" id="profileFirstName" name="data['first_name']" value="<?php echo set_value('first_name', $user->first_name) ?>">
+														<input type="text" class="form-control" id="profileFirstName" name="data[first_name]" value="<?php echo set_value('first_name', $user->first_name) ?>">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-12 control-label" for="profileLastName">Last Name</label>
 													<div class="col-md-12">
-														<input type="text" class="form-control" id="profileLastName" name="data['first_name']" value="<?php echo set_value('last_name', $user->last_name) ?>">
+														<input type="text" class="form-control" id="profileLastName" name="data[last_name]" value="<?php echo set_value('last_name', $user->last_name) ?>">
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-12 control-label" for="profileAddress">Address</label>
 													<div class="col-md-12">
-														<input type="text" class="form-control" id="profileAddress" name="data['first_name']" value="<?php echo set_value('address', $user->address) ?>" >
+														<input type="text" class="form-control" id="profileAddress" name="data[address]" value="<?php echo set_value('address', $user->address) ?>" >
 													</div>
 												</div>
 												<div class="form-group">
 													<label class="col-md-12 control-label" for="profileCompany">Company</label>
 													<div class="col-md-12">
-														<input type="text" class="form-control" id="profileCompany" name="data['first_name']" value="<?php echo set_value('company', $user->company) ?>">
+														<input type="text" class="form-control" id="profileCompany" name="data[company]" value="<?php echo set_value('company', $user->company) ?>">
 													</div>
 												</div>
 											</fieldset>
@@ -128,7 +128,7 @@
 												<div class="form-group">
 													<label class="col-md-12 control-label" for="profileBio">Biographical Info</label>
 													<div class="col-md-12">
-														<textarea class="form-control" rows="3" id="profileBio" name="data['first_name']" value="<?php echo set_value('about_us', $user->about_us) ?>" ></textarea>
+														<textarea class="form-control" rows="3" id="profileBio" name="data[about_us]" ><?php echo set_value('about_us', $user->about_us) ?></textarea>
 													</div>
 												</div>
 												<div class="form-group">
@@ -369,7 +369,7 @@
 									
 									<div id="change_password" class="tab-pane">
 
-										<form class="form-horizontal" id="createform" action="" method="post">
+										<form class="form-horizontal" id="createform" action="<?=site_url('change-password')?>" method="post">
 											
 											<h4 class="mb-xlg">Change Password</h4>
 											<fieldset class="mb-xl">

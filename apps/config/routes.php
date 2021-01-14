@@ -60,7 +60,8 @@ $route['login'] = 'store/login';
 $route['register']='store/register';
 $route['user-dashboard'] = 'store/user_dash';
 $route['user-profile'] = 'store/user_profile';
-$route['changepassword']='store/changepassword';
+$route['change-password']='store/change_password';
+$route['update-personal-info']='store/update_personal_info';
 $route['consultant-dashboard']='store/consultant_dash';
 
 
@@ -75,7 +76,7 @@ $route['revieworder']='store/review_order';
 $route['myorders']='accounts/myorders';
 $route['wishlists']='accounts/wishlists';
 $route['member-tree']='accounts/member_tree';
-$route['changepassword']='accounts/changepassword';
+// $route['changepassword']='accounts/changepassword';
 $route['affiliate']='accounts/affiliate';
 $route['refer-earn']='accounts/refer_earn';
 $route['trans-history']='accounts/trans_history';
