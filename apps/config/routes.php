@@ -55,13 +55,23 @@ $route['admin']                 = 'admin/users/login';
 $route['admin/(.+)']            = 'admin/$1';
 $route['logout']            = 'store/logout';
 
+
+$route['login'] = 'store/login';
+$route['register']='store/register';
+$route['user-dashboard'] = 'store/user_dash';
+$route['user-profile'] = 'store/user_profile';
+$route['changepassword']='store/changepassword';
+$route['consultant-dashboard']='store/consultant_dash';
+
+
+
+
 $route['404_override'] 			= ''; //'error404';
  $route['checkout']='store/checkout';
  $route['(:any)/(:num)']         = 'store/category/$1/$2';
 $route['categories']='store/categories';
 $route['revieworder']='store/review_order';
-$route['login'] = 'store/login';
-$route['register']='store/register';
+
 $route['myorders']='accounts/myorders';
 $route['wishlists']='accounts/wishlists';
 $route['member-tree']='accounts/member_tree';
